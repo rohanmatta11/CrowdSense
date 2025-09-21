@@ -1,50 +1,5 @@
-# Welcome to your Expo app 👋
+CrowdSense is an innovative application that leverages Bluetooth technology to estimate the number of people in the surrounding environment. The core functionality of the app is to detect nearby Bluetooth connections and use this data to provide a rough approximation of human presence. By identifying both known and unknown devices, the app can help users infer the number of individuals nearby. This approach is based on the observation that most people carry multiple Bluetooth-enabled devices—typically three to four—at any given time, allowing the app to provide a reasonable estimate of crowd density. Over time, we explored extending the project into a multi-person, crowdsourced platform that could collect and share data across devices. For this, we looked at integrating cloud databases such as Supabase to handle larger amounts of aggregated data efficiently. The majority of our code was designed specifically for iOS devices, taking advantage of Swift, CoreBluetooth, and location services to create a seamless and responsive user experience.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+The motivation behind CrowdSense originated from our personal experiences in public spaces. While studying in libraries, cafes, or on campus, we often wanted a better sense of how many people were around us. At times, this need stemmed from simple curiosity, while at other moments it was driven by a concern for personal safety and awareness, such as when we felt uneasy about someone following us. As the project evolved toward a multi-person model, we realized that the same technology could also be applied to track busy transit stations, walkways, or other areas with high foot traffic, offering real-time insights into crowd levels.
 
-## Get started
-
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+The purpose of the code is twofold: it keeps track of known devices, which can be considered familiar or “safe,” and it monitors unknown devices to estimate additional human presence. By aggregating this information, users gain actionable insights into the density of their surroundings, which can help in making decisions about where to study, commute, or move safely. CrowdSense demonstrates how Bluetooth scanning can be used to provide valuable, privacy-conscious data about the environment, transforming raw device signals into meaningful insights about crowd behavior and human activity in everyday life.
